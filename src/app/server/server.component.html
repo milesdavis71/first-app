@@ -1,1 +1,3 @@
-<p [ngStyle]="{backgroundColor: getColor()}" >A szerver ID-je: {{serverId}}, a szerver állapota: {{serverStatus}}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}"
+>A szerver ID-je: {{serverId}}, a szerver állapota: {{serverStatus}}</p>
