@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
-  allowNewSeerver = false;
-  serverCreationStatus = 'No server was created';
-  serverName = 'Pitju szerver';
+  serverName = 'Pityu szerver';
+  allowNewServer = false;
+  serverCreationsStatus = `Nincs szerver`;
   serverCreated = false;
 
   constructor() {
     setTimeout(() => {
-      this.allowNewSeerver = true;
+      this.allowNewServer = true;
     }, 2000);
   }
 
@@ -21,6 +21,6 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
-    this.serverCreationStatus = `A szerver neve: ${this.serverName}`;
+    this.serverCreationsStatus = `Új szerver létrehozva, neve ${this.serverName}`;
   }
 }
